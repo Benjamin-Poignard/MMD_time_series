@@ -22,7 +22,7 @@ The Matlab code was run on a Windows-Intel(R) Xeon(R) Gold 6242R CPU @ 3.10GHz (
 The following toolboxes should be installed:
 
 - Global Optimization Toolbox, Version 23.2
-- - Optimization Toolbox, Version 23.2
+- Optimization Toolbox, Version 23.2
 - Parallel Computing Toolbox, Version 23.2
 
 The Parallel Computing Toolbox is recommended to run the code in the case of 100 batches-based experiments.
