@@ -32,6 +32,9 @@ The Parallel Computing Toolbox is recommended to run the code in the case of 100
 The main functions to conduct the estimation of ISMMD and PSMMD estimator $\tilde{\theta}^{(k)}_{N,T}$ (ISMMD for $k=1$; PSMMD for $k=2$) for GARCH model are *garch_mmd.m* and *garch_mmd_T.m*, respectively.
 All the other models are built the same way: *sv_mmd.m* and *sv_mmd_T.m*; *arma_mmd.m* and *arma_mmd_T.m*, etc.
 
+The code for rbf_dot.m, mmd.m and median_heuristic.m were downloaded from the website: https://www.gatsby.ucl.ac.uk/~gretton/mmd/mmd.htm
+"A Kernel Two-Sample Test" by Arthur Gretton, Karsten Borgwardt, Malte Rasch, Bernhard Schoelkopf, Alex Smola
+
 # To come
 
 A package that will allow the user to specify the function to be optimized and the constraints to be satisfied will soon be provided. 
