@@ -10,8 +10,8 @@ Link:
 
 The code in this replication includes:
 
-- The different models considered in the paper and their estimation by MMD: the replicator should execute program *simulations.m* for one batch.
-- The full experiments (100 batches) can be found in the folder *sim*.
+- The different models considered in the paper and their estimation by MMD: the file *simulations.m* provides an overview of ISMMD, PSMMD, and alternative estimation methods, for all the models (SV, GARCH, ARMA, non-linear MA and Ricker); the replicator should execute program *simulations.m* for one batch.
+- The full experiments (100 batches) can be found in *simulation_SV.m* for SV model, *simulation_GARCH.m* for GARCH model, *simulation_arma.m* for ARMA model, *simulation_NLts.m* for non-linear MA model, *simulation_ricker.m* for Ricker model.
 - The code for the selection of an optimal lag p can be found in *validation.m*
 - The code comparing the performances of the stochastic gradient descent and the gradient descent based on simulated innovations drawn once only can be found in *simulation_arma.m* and *simulation_NLts.m* for the ARMA model and the non-linear model, respectively.
 
@@ -29,8 +29,8 @@ The Parallel Computing Toolbox is recommended to run the code in the case of 100
 
 # Description of the code
 
-The main functions to conduct the estimation of ISMMD and PSMMD estimator $\tilde{\theta}^{(k)}_{N,T}$ (ISMMD for $k=1$; PSMMD for $k=2$) for GARCH model are *garch_mmd.m* and *garch_mmd_T.m*, respectively.
-All the other models are built the same way: *sv_mmd.m* and *sv_mmd_T.m*; *arma_mmd.m* and *arma_mmd_T.m*, etc.
+The main functions to conduct the estimation of ISMMD and PSMMD estimator $\tilde{\theta}^{(k)}_{N,T}$ (ISMMD for $k=1$; PSMMD for $k=2$) for GARCH model are *gradient_garch_ismmd.m* and *gradient_garch_psmmd.m*, respectively.
+All the other models (SV, ARMA, non-linear MA and Ricker) are built the same way.
 
 The code for rbf_dot.m, mmd.m and median_heuristic.m were downloaded from the website: https://www.gatsby.ucl.ac.uk/~gretton/mmd/mmd.htm
 "A Kernel Two-Sample Test" by Arthur Gretton, Karsten Borgwardt, Malte Rasch, Bernhard Schoelkopf, Alex Smola
