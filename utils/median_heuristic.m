@@ -1,0 +1,17 @@
+function sigma = median_heuristic(Z)
+
+% Compute the Gaussian kernel hyperparameter by median heuristic
+size1=size(Z,1);
+if size1>100
+    Zmed = Z(1:100,:);
+    size1 = 100;
+else
+    Zmed = Z;
+end
+G = sum((Zmed.*Zmed),2);
+Q = repmat(G,1,size1);
+R = repmat(G',size1,1);
+dists = Q + R - 2*(Zmed*Zmed');
+dists = dists-tril(dists);
+dists=reshape(dists,size1^2,1);
+sigma = sqrt(0.5*median(dists(dists>0)));
