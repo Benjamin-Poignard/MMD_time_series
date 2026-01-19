@@ -4,7 +4,7 @@ Matlab implementation of time series estimation by Maximum Mean Discrepancy base
 
 *Estimation of time series by Maximum Mean Discrepancy* by Pierre Alquier, Jean-David Fermanian and Benjamin Poignard.
 
-Link: 
+Link: https://arxiv.org/abs/2601.11233
 
 # Overview
 
